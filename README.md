@@ -15,7 +15,7 @@ lazymermaid --version
 lazymermaid upgrade --check
 ```
 
-**v0.1.0** adds macOS/Linux amd64/arm64 binary releases and the personal Homebrew
+**v0.1.1** adds macOS/Linux amd64/arm64 binary releases and the personal Homebrew
 formula. Go is optional for binary installs; runtime backends remain separate.
 See [installation, completion and owner-aware upgrades](docs/distribution.md).
 [MIT license](LICENSE).

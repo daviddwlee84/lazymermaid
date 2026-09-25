@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## v0.1.1 - 2026-09-25
+
+- Fix Homebrew upgrades when `brew` is a symlink, including the standard Linuxbrew layout: retain its invocation path while binding and revalidating the resolved manager file.
+- Keep the existing exact-formula, receipt, changed-target and no-fallback checks.
+
 ## v0.1.0 - 2026-09-25
 
 - Wait for Neovim runtime initialization after connecting RPC, avoiding an intermittent startup failure.
