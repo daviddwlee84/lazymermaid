@@ -9,10 +9,10 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"github.com/charmbracelet/x/ansi"
-	"lazymermaid/internal/config"
-	"lazymermaid/internal/document"
-	"lazymermaid/internal/graphics"
-	"lazymermaid/internal/render"
+	"github.com/daviddwlee84/lazymermaid/internal/config"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/graphics"
+	"github.com/daviddwlee84/lazymermaid/internal/render"
 )
 
 func testModel(t *testing.T) *Model {

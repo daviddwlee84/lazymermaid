@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
 )
 
 func isolatedCLI(t *testing.T) string {

@@ -77,3 +77,11 @@ node_modules/
 .venv/
 __pycache__/
 /test-results/
+
+# Release artifacts
+/dist/
+/completions/
+__pycache__/
+
+# Private local development evidence is not published.
+/.specstory/

@@ -1,0 +1,18 @@
+{
+  "main": "./cmd/lazymermaid",
+  "version_symbol": "main.version",
+  "required": [
+    "cmd/lazymermaid/main.go",
+    "internal/render/render.go",
+    "internal/handbook/handbook.go",
+    "internal/editor/editor.go",
+    "runtime/mermaid/runtime.go"
+  ],
+  "smoke": [
+    [
+      "upgrade",
+      "--check",
+      "--json"
+    ]
+  ]
+}

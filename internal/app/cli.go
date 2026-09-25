@@ -5,18 +5,19 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/daviddwlee84/lazymermaid/internal/managedupgrade"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
 
+	"github.com/daviddwlee84/lazymermaid/internal/config"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/handbook"
+	"github.com/daviddwlee84/lazymermaid/internal/render"
+	"github.com/daviddwlee84/lazymermaid/internal/tui"
 	"github.com/spf13/cobra"
 	"golang.org/x/term"
-	"lazymermaid/internal/config"
-	"lazymermaid/internal/document"
-	"lazymermaid/internal/handbook"
-	"lazymermaid/internal/render"
-	"lazymermaid/internal/tui"
 )
 
 type exitError struct {
@@ -131,6 +132,7 @@ func NewCommand(version string) *cobra.Command {
 	scan.Flags().BoolVar(&scanJSON, "json", false, "Machine-readable output")
 	scan.Flags().BoolVar(&hidden, "hidden", false, "Include hidden files")
 	scan.Flags().BoolVar(&noIgnore, "no-ignore", false, "Include ignored files")
+	root.AddCommand(managedupgrade.NewCommand(managedupgrade.Product{Binary: "lazymermaid", Module: "github.com/daviddwlee84/lazymermaid", Main: "github.com/daviddwlee84/lazymermaid/cmd/lazymermaid"}))
 	root.AddCommand(scan)
 	var format, out string
 	var line int

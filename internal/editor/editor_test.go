@@ -11,7 +11,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
 )
 
 func newTestPane(t *testing.T) *Pane {

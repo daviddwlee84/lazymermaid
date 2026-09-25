@@ -8,7 +8,7 @@ import (
 	"runtime/debug"
 	"syscall"
 
-	"lazymermaid/internal/app"
+	"github.com/daviddwlee84/lazymermaid/internal/app"
 )
 
 var version = "dev"

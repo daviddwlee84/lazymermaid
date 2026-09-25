@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/charmbracelet/x/ansi"
-	"lazymermaid/internal/document"
-	"lazymermaid/internal/editor"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/editor"
 )
 
 func listModel(t *testing.T, count int) *Model {

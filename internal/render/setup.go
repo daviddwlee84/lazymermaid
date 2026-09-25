@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	mermaidruntime "lazymermaid/runtime/mermaid"
+	mermaidruntime "github.com/daviddwlee84/lazymermaid/runtime/mermaid"
 )
 
 // PrepareRuntime writes the shipped npm manifest and lockfile into an explicit

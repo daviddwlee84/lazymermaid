@@ -7,6 +7,19 @@ changes as official Mermaid images or termaid Unicode/ASCII art.
 lazymermaid integrates upstream tools. It does not implement Mermaid syntax,
 layout, an ASCII renderer, or an editor engine.
 
+## Install / 安裝
+
+```sh
+brew install daviddwlee84/tap/lazymermaid
+lazymermaid --version
+lazymermaid upgrade --check
+```
+
+**v0.1.0** adds macOS/Linux amd64/arm64 binary releases and the personal Homebrew
+formula. Go is optional for binary installs; runtime backends remain separate.
+See [installation, completion and owner-aware upgrades](docs/distribution.md).
+[MIT license](LICENSE).
+
 ## Build and start
 
 Requires Go 1.26.5 or newer to build. macOS and Linux are the initial targets.
@@ -159,10 +172,9 @@ not proof that every terminal/multiplexer combination works. Unicode/ASCII and
 SVG/PNG export remain available independently. Sixel, iTerm2-native graphics,
 full MDX and semantic indentation are future work.
 
-This is currently a checkout-installed development version. Use
-`go install ./cmd/lazymermaid` to install; update your checkout and repeat that
-command to upgrade. There are no published release assets or package-manager
-installations yet, so there is deliberately no self-updater.
+Use `lazymermaid upgrade --check` / `--yes` for a verified Homebrew installation.
+Checkout users can still rebuild with `go install ./cmd/lazymermaid`; standalone
+archives use their external installer. See [distribution](docs/distribution.md).
 
 ## Development
 

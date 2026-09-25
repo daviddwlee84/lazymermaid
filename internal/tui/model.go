@@ -20,12 +20,12 @@ import (
 	"charm.land/lipgloss/v2"
 	"github.com/charmbracelet/colorprofile"
 	"github.com/charmbracelet/x/ansi"
-	"lazymermaid/internal/config"
-	"lazymermaid/internal/document"
-	"lazymermaid/internal/editor"
-	"lazymermaid/internal/graphics"
-	"lazymermaid/internal/handbook"
-	"lazymermaid/internal/render"
+	"github.com/daviddwlee84/lazymermaid/internal/config"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/editor"
+	"github.com/daviddwlee84/lazymermaid/internal/graphics"
+	"github.com/daviddwlee84/lazymermaid/internal/handbook"
+	"github.com/daviddwlee84/lazymermaid/internal/render"
 )
 
 type scanMsg struct {

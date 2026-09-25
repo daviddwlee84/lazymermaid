@@ -22,7 +22,7 @@ import (
 	"github.com/taigrr/bubbleterm"
 	"github.com/taigrr/bubbleterm/emulator"
 
-	"lazymermaid/internal/document"
+	"github.com/daviddwlee84/lazymermaid/internal/document"
 )
 
 //go:embed init.lua

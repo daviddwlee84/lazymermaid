@@ -53,3 +53,9 @@ Close cleans owned graphics resources, not the user's stdout descriptor.
 Use the project-knowledge-harness skill's init/add-todo/promote/validation tools
 when available. Do not create competing roadmap/ideas indexes or fill files with
 unverified commands. Semantic indentation is deliberately deferred.
+
+## Binary distribution
+
+See `docs/distribution.md`. Run GoReleaser config/snapshot checks and
+`scripts/check-distribution.py` before tagging. Preserve immutable releases and
+source/module exclusions. Backend setup is separate from installing this CLI.

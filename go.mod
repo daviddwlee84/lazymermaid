@@ -1,4 +1,4 @@
-module lazymermaid
+module github.com/daviddwlee84/lazymermaid
 
 go 1.26.5
 
