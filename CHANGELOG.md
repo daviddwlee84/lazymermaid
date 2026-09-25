@@ -4,6 +4,8 @@
 
 ## v0.1.0 - 2026-09-25
 
+- Wait for Neovim runtime initialization after connecting RPC, avoiding an intermittent startup failure.
+
 - Publish macOS/Linux amd64/arm64 binary archives, checksums and a filtered source archive.
 - Add the personal Homebrew formula channel with generated Bash/Zsh completions.
 - Provide `lazymermaid upgrade` and read-only `--check` through verified Homebrew ownership; preserve standalone/local copies and document their external update paths.

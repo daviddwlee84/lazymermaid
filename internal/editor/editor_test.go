@@ -41,6 +41,25 @@ func eventually(t *testing.T, check func() bool) {
 	t.Fatal("condition was not observed within 3 seconds")
 }
 
+func TestRealNeovimWaitsForYieldingInitialization(t *testing.T) {
+	if _, err := exec.LookPath("nvim"); err != nil {
+		t.Skip("Neovim is not installed")
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), 8*time.Second)
+	defer cancel()
+	// vim.wait services incoming RPC before our runtime table exists. This
+	// deterministically reproduces a socket becoming ready ahead of init.lua.
+	initialization := append([]byte("vim.wait(200, function() return false end, 10)\n"), initLua...)
+	p, err := newWithInit(ctx, Options{Directory: t.TempDir(), Width: 80, Height: 24}, initialization)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer p.Close(true)
+	if _, err := p.CurrentSnapshot(); err != nil {
+		t.Fatalf("editor returned before initialization completed: %v", err)
+	}
+}
+
 func TestRealNeovimUnsavedUnicodePasteAndCloseGuard(t *testing.T) {
 	config := t.TempDir()
 	if err := os.MkdirAll(filepath.Join(config, "nvim"), 0700); err != nil {

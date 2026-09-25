@@ -59,3 +59,7 @@ unverified commands. Semantic indentation is deliberately deferred.
 See `docs/distribution.md`. Run GoReleaser config/snapshot checks and
 `scripts/check-distribution.py` before tagging. Preserve immutable releases and
 source/module exclusions. Backend setup is separate from installing this CLI.
+
+Neovim socket readiness precedes Lua/runtime readiness; keep the bounded startup
+handshake before invoking application RPC functions. See
+`pitfalls/neovim-rpc-before-init.md` and its yielding-init integration test.

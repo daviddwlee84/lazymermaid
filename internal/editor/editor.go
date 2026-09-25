@@ -93,6 +93,10 @@ type Pane struct {
 // New starts Neovim and connects RPC. Call it from a background effect, since
 // process startup and socket readiness perform I/O.
 func New(ctx context.Context, opts Options) (_ *Pane, err error) {
+	return newWithInit(ctx, opts, initLua)
+}
+
+func newWithInit(ctx context.Context, opts Options, initialization []byte) (_ *Pane, err error) {
 	if opts.NvimPath == "" {
 		opts.NvimPath = "nvim"
 	}
@@ -117,7 +121,7 @@ func New(ctx context.Context, opts Options) (_ *Pane, err error) {
 			_ = os.RemoveAll(dir)
 		}
 	}()
-	if err = os.WriteFile(filepath.Join(dir, "init.lua"), initLua, 0600); err != nil {
+	if err = os.WriteFile(filepath.Join(dir, "init.lua"), initialization, 0600); err != nil {
 		return nil, err
 	}
 	socket := filepath.Join(dir, "nvim.sock")
@@ -165,6 +169,28 @@ func New(ctx context.Context, opts Options) (_ *Pane, err error) {
 	}
 	if err = p.rpc.RegisterHandler("lazymermaid_virtual_saved", p.virtualSaved); err != nil {
 		return nil, err
+	}
+	// --listen can accept RPC while init.lua is still yielding to Neovim's
+	// event loop. Socket readiness is not editor-runtime readiness. Probe from
+	// separate requests so initialization can resume between them.
+	for {
+		var ready bool
+		if err = p.rpc.ExecLua("return _G.lazymermaid ~= nil and type(_G.lazymermaid.dirty) == 'function' and vim.v.vim_did_enter == 1", &ready); err != nil {
+			return nil, fmt.Errorf("inspect Neovim initialization: %w", err)
+		}
+		if ready {
+			break
+		}
+		select {
+		case <-ctx.Done():
+			return nil, ctx.Err()
+		case <-deadline.C:
+			return nil, errors.New("Neovim editor runtime did not finish initialization")
+		case <-tick.C:
+			if term.GetEmulator().IsProcessExited() {
+				return nil, errors.New("Neovim exited during initialization")
+			}
+		}
 	}
 	if err = p.rpc.ExecLua("lazymermaid.connect(...)", nil, p.rpc.ChannelID(), opts.RuntimePaths); err != nil {
 		return nil, fmt.Errorf("initialize Neovim: %w", err)
