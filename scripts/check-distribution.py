@@ -57,7 +57,7 @@ def excluded(name):
 def check_names(names, required):
     names = set(names)
     if any(excluded(name) for name in names):
-        raise ValueError("distribution contains conversation or agent plan evidence")
+        raise ValueError("distribution contains conversation or agent plan evidence: " + ", ".join(sorted(name for name in names if excluded(name))[:12]))
     missing = set(required) - names
     if missing:
         raise ValueError("distribution is missing required build inputs: " + ", ".join(sorted(missing)))
