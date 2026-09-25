@@ -1,0 +1,228 @@
+{
+  "version": "12.0.0",
+  "tag": "mermaid@12.0.0",
+  "pages": [
+    {
+      "slug": "directives",
+      "title": "Directives",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/config/directives.md"
+    },
+    {
+      "slug": "theming",
+      "title": "Theme Configuration",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/config/theming.md"
+    },
+    {
+      "slug": "syntax-reference",
+      "title": "Diagram Syntax",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/intro/syntax-reference.md"
+    },
+    {
+      "slug": "agentflow",
+      "title": "Agentflow (v12.0.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/agentflow.md"
+    },
+    {
+      "slug": "architecture",
+      "title": "Architecture Diagrams Documentation (v11.1.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/architecture.md"
+    },
+    {
+      "slug": "block",
+      "title": "Block Diagrams Documentation",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/block.md"
+    },
+    {
+      "slug": "c4",
+      "title": "C4 Diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/c4.md"
+    },
+    {
+      "slug": "classDiagram",
+      "title": "Class diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/classDiagram.md"
+    },
+    {
+      "slug": "cynefin",
+      "title": "Cynefin Framework Diagram (v11.16.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/cynefin.md"
+    },
+    {
+      "slug": "entityRelationshipDiagram",
+      "title": "Entity Relationship Diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/entityRelationshipDiagram.md"
+    },
+    {
+      "slug": "eventmodeling",
+      "title": "Event Modeling Diagram (v11.15.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/eventmodeling.md"
+    },
+    {
+      "slug": "examples",
+      "title": "Examples",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/examples.md"
+    },
+    {
+      "slug": "flowchart",
+      "title": "Flowcharts - Basic Syntax",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/flowchart.md"
+    },
+    {
+      "slug": "gantt",
+      "title": "Gantt diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/gantt.md"
+    },
+    {
+      "slug": "gitgraph",
+      "title": "GitGraph Diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/gitgraph.md"
+    },
+    {
+      "slug": "ishikawa",
+      "title": "Ishikawa diagram (v11.12.3+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/ishikawa.md"
+    },
+    {
+      "slug": "kanban",
+      "title": "Mermaid Kanban Diagram Documentation",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/kanban.md"
+    },
+    {
+      "slug": "mindmap",
+      "title": "Mindmap",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/mindmap.md"
+    },
+    {
+      "slug": "packet",
+      "title": "Packet Diagram (v11.0.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/packet.md"
+    },
+    {
+      "slug": "pie",
+      "title": "Pie chart diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/pie.md"
+    },
+    {
+      "slug": "quadrantChart",
+      "title": "Quadrant Chart",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/quadrantChart.md"
+    },
+    {
+      "slug": "radar",
+      "title": "Radar Diagram (v11.6.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/radar.md"
+    },
+    {
+      "slug": "railroad",
+      "title": "Railroad Diagrams (v11.16.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/railroad.md"
+    },
+    {
+      "slug": "requirementDiagram",
+      "title": "Requirement Diagram",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/requirementDiagram.md"
+    },
+    {
+      "slug": "sankey",
+      "title": "Sankey diagram (v10.3.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/sankey.md"
+    },
+    {
+      "slug": "sequenceDiagram",
+      "title": "Sequence diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/sequenceDiagram.md"
+    },
+    {
+      "slug": "stateDiagram",
+      "title": "State diagrams",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/stateDiagram.md"
+    },
+    {
+      "slug": "swimlanes",
+      "title": "Swimlanes Diagram (v11.16.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/swimlanes.md"
+    },
+    {
+      "slug": "timeline",
+      "title": "Timeline Diagram",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/timeline.md"
+    },
+    {
+      "slug": "treeView",
+      "title": "TreeView Diagram (v11.14.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/treeView.md"
+    },
+    {
+      "slug": "treemap",
+      "title": "Treemap Diagram",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/treemap.md"
+    },
+    {
+      "slug": "usecase",
+      "title": "Use case diagrams (12.0.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/usecase.md"
+    },
+    {
+      "slug": "userJourney",
+      "title": "User Journey Diagram",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/userJourney.md"
+    },
+    {
+      "slug": "venn",
+      "title": "Venn diagrams (v11.12.3+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/venn.md"
+    },
+    {
+      "slug": "wardley",
+      "title": "Wardley Maps (v11.14.0+)",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/wardley.md"
+    },
+    {
+      "slug": "xyChart",
+      "title": "XY Chart",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/xyChart.md"
+    },
+    {
+      "slug": "zenuml",
+      "title": "ZenUML",
+      "version": "12.0.0",
+      "source": "https://github.com/mermaid-js/mermaid/blob/mermaid%4012.0.0/packages/mermaid/src/docs/syntax/zenuml.md"
+    }
+  ]
+}

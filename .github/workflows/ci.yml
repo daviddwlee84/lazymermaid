@@ -1,0 +1,28 @@
+name: Go and terminal checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Install Neovim (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y neovim
+      - name: Install Neovim (macOS)
+        if: runner.os == 'macOS'
+        run: brew install neovim
+      - run: go vet ./...
+      - run: go test -race ./...
+      - run: go build -o bin/lazymermaid ./cmd/lazymermaid
+      - run: python3 scripts/pty_smoke.py --binary ./bin/lazymermaid
